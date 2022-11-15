@@ -1,0 +1,42 @@
+<link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" rel="stylesheet">
+<link href="serie.component.css" rel="stylesheet">
+<div class="container">
+  <div class="row">
+    <img alt="logo" src="https://cdn-icons-png.flaticon.com/512/3800/3800088.png">
+    <h1>Series de Televisión</h1>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <table class="table">
+          <thead class="thead">
+          <tr>
+            <th>#</th>
+            <th>Nombre</th>
+            <th>Canal</th>
+            <th>Temporadas</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let s of series">
+            <td>
+              <dd>{{ s.id }}</dd>
+            </td>
+            <td>
+              <dd>{{ s.name }}</dd>
+            </td>
+            <td>
+              <dd>{{ s.channel }}</dd>
+            </td>
+            <td>
+              <dd>{{ s.seasons }}</dd>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <tr id="seasons-average"> Seasons average: {{seasonAVG}}</tr>
+    </div>
+  </div>
+</div>
